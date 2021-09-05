@@ -120,3 +120,32 @@ footer {
 .footer-link {
   color: #999;
 }
+
+@media (max-width: 500px) {
+  .mancala {
+    font-size: 2rem;
+  }
+  .box {
+    width: 340px;
+    height: 170px;
+    padding: 10px;
+  }
+  .title {
+    font-size: 2rem;
+    top: -50px;
+  }
+  .title.bottom {
+    top: 180px;
+  }
+  .columns {
+    gap: 10px;
+    margin: 0 10px;
+  }
+  .row {
+    gap: 5px;
+    height: calc(50% - 8px);
+  }
+  .container {
+    height: calc(100% - 10px);
+  }
+}
