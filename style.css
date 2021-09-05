@@ -1,0 +1,122 @@
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.background {
+  background-color: #3b3b3e;
+}
+
+.mancala {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+}
+
+.box {
+  position: relative;
+  background: white;
+  width: 800px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  background-color: grey;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.container {
+  border: 5px solid black;
+  width: 15%;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-shadow: inset 4px 4px 13px rgba(0, 0, 0, 0.8);
+  user-select: none;
+}
+
+.container:active {
+  background: black;
+  color: white;
+}
+
+.columns {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  gap: 20px;
+  margin: 0 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: inherit;
+  gap: 20px;
+  height: 100%;
+  user-select: none;
+}
+
+.hole {
+  border: 2px solid black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: inset 2px 2px 13px rgba(0, 0, 0, 0.8);
+}
+
+.hole:hover:not(.empty) {
+  border-color: white;
+  cursor: pointer;
+}
+
+.hole:active:not(.empty) {
+  background: black;
+  color: white;
+}
+
+.title {
+  position: absolute;
+  text-align: center;
+  top: -80px;
+  color: white;
+  width: 100%;
+  font-size: 3rem;
+  z-index: 200;
+}
+.title.bottom {
+  top: 310px;
+}
+
+.curtain {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
+}
+
+.footer-link {
+  color: #999;
+}
