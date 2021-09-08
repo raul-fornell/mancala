@@ -14,9 +14,16 @@ const board = [
   ...Array.from(document.querySelectorAll(".top.row .hole")).reverse(),
 ];
 
-function onHoleClick(event) {
-  const index = board.findIndex(item => item === event.currentTarget);
-  dispatchEvent('onHoleClick', index);
+function isHole(element) {
+  return element.classList.contains("hole");
+}
+
+function getHoleIndex(element) {
+  return board.findIndex(item => item === element);
+}
+
+function onBoardClick(event) {
+  isHole(event.target) && dispatchEvent('onHoleClick', getHoleIndex(event.target));
 }
 
 function setStyleForZeroQuantity(element) {
@@ -27,8 +34,7 @@ function setStyleForPositiveQuantity(element) {
   element.classList.remove("empty");
 }
 
-board.filter(hole => hole.classList.contains('hole'))
-     .forEach(hole => hole.addEventListener('click', onHoleClick));
+document.querySelector(".columns").addEventListener("click", onBoardClick);
 
 export default {
   updateContainers(stones) {
