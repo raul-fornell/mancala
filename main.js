@@ -15,7 +15,7 @@ function gameStart() {
   curtain.hide();
   game.resetStones({
     player1Stones: 0,
-    player2stores: 0,
+    player2stones: 0,
     initialStonesPerHole: 4
   });
   game.resetPlayer();

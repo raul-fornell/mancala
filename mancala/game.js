@@ -127,7 +127,7 @@ export default {
   resetStones(options) {
     setQuantityForAllStones(options.initialStonesPerHole);
     this.setLeftContainer(options.player1Stones);
-    this.setRightContainer(options.player2stores);
+    this.setRightContainer(options.player2stones);
     emitUpdate();
   },
   resetPlayer() {
