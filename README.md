@@ -8,4 +8,10 @@ For example the following command, will open a web server in <http://localhost:8
 python -m SimpleHTTPServer 8000
 ```
 
+Or if you have npm installed
+
+```bash
+npx http-server
+```
+
 Rules for Mancala the board game can be read <https://www.thesprucecrafts.com/how-to-play-mancala-409424>
